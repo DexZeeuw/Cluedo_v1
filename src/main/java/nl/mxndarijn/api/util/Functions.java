@@ -5,9 +5,8 @@ import net.kyori.adventure.text.serializer.plain.PlainTextComponentSerializer;
 import nl.mxndarijn.api.logger.LogLevel;
 import nl.mxndarijn.api.logger.Logger;
 import nl.mxndarijn.api.logger.Prefix;
-import nl.mxndarijn.wieisdemol.WieIsDeMol;
+import nl.mxndarijn.cluedo.Cluedo;
 import org.bukkit.Bukkit;
-import org.bukkit.Color;
 import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.configuration.ConfigurationSection;
@@ -18,10 +17,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.file.Files;
-import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-import java.util.stream.Collectors;
 
 public class Functions {
     public static Location getSpawnLocation() {
@@ -37,7 +32,7 @@ public class Functions {
     }
 
     public static void copyFileFromResources(String fileName, String path) {
-        JavaPlugin plugin = JavaPlugin.getPlugin(WieIsDeMol.class);
+        JavaPlugin plugin = JavaPlugin.getPlugin(Cluedo.class);
         File destFile = new File(plugin.getDataFolder() + File.separator + path);
         destFile.getParentFile().mkdirs();
 
@@ -46,7 +41,7 @@ public class Functions {
 
     public static void copyFileFromResources(String fileName, File destFile) {
         destFile.getParentFile().mkdirs();
-        JavaPlugin plugin = JavaPlugin.getPlugin(WieIsDeMol.class);
+        JavaPlugin plugin = JavaPlugin.getPlugin(Cluedo.class);
         InputStream inputStream = plugin.getResource(fileName);
         if (inputStream == null) {
             Logger.logMessage(LogLevel.FATAL, Prefix.CONFIG_FILES, "Could load resource: " + fileName);

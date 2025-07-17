@@ -1,7 +1,7 @@
 package nl.mxndarijn.api.item;
 
 import net.kyori.adventure.text.Component;
-import nl.mxndarijn.wieisdemol.WieIsDeMol;
+import nl.mxndarijn.cluedo.Cluedo;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.enchantments.Enchantment;
@@ -64,7 +64,7 @@ public class MxItemStackBuilder<T extends MxItemStackBuilder<T>> {
     }
 
     public T addCustomTagString(String tagName, String value) {
-        itemMeta.getPersistentDataContainer().set(new NamespacedKey(JavaPlugin.getPlugin(WieIsDeMol.class), tagName), PersistentDataType.STRING, value);
+        itemMeta.getPersistentDataContainer().set(new NamespacedKey(JavaPlugin.getPlugin(Cluedo.class), tagName), PersistentDataType.STRING, value);
         return (T) this;
     }
 
@@ -80,13 +80,13 @@ public class MxItemStackBuilder<T extends MxItemStackBuilder<T>> {
     }
 
     public T addCustomTagString(String tagName, int value) {
-        itemMeta.getPersistentDataContainer().set(new NamespacedKey(JavaPlugin.getPlugin(WieIsDeMol.class), tagName), PersistentDataType.INTEGER, value);
+        itemMeta.getPersistentDataContainer().set(new NamespacedKey(JavaPlugin.getPlugin(Cluedo.class), tagName), PersistentDataType.INTEGER, value);
 
         return (T) this;
     }
 
     public T addCustomTagString(String persistentDataTag, boolean b) {
-        itemMeta.getPersistentDataContainer().set(new NamespacedKey(JavaPlugin.getPlugin(WieIsDeMol.class), persistentDataTag), PersistentDataType.STRING, String.valueOf(b));
+        itemMeta.getPersistentDataContainer().set(new NamespacedKey(JavaPlugin.getPlugin(Cluedo.class), persistentDataTag), PersistentDataType.STRING, String.valueOf(b));
 
         return (T) this;
     }

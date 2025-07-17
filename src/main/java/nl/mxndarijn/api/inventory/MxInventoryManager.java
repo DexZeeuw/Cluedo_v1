@@ -1,6 +1,6 @@
 package nl.mxndarijn.api.inventory;
 
-import nl.mxndarijn.wieisdemol.WieIsDeMol;
+import nl.mxndarijn.cluedo.Cluedo;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -18,7 +18,7 @@ public class MxInventoryManager implements Listener {
     private final JavaPlugin plugin;
     private MxInventoryManager() {
         inventories = new HashMap<>();
-        plugin = JavaPlugin.getPlugin(WieIsDeMol.class);
+        plugin = JavaPlugin.getPlugin(Cluedo.class);
         plugin.getServer().getPluginManager().registerEvents(this, plugin);
 
     }
@@ -99,7 +99,7 @@ public class MxInventoryManager implements Listener {
             return;
         }
         addInventory(p.getUniqueId(), inv);
-        Bukkit.getScheduler().runTask(JavaPlugin.getPlugin(WieIsDeMol.class), () -> {
+        Bukkit.getScheduler().runTask(JavaPlugin.getPlugin(Cluedo.class), () -> {
             p.openInventory(inv.getInv());
         });
 

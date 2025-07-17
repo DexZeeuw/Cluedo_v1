@@ -5,7 +5,7 @@ import nl.mxndarijn.api.logger.Logger;
 import nl.mxndarijn.api.logger.Prefix;
 import nl.mxndarijn.api.util.Functions;
 import nl.mxndarijn.api.util.VoidGenerator;
-import nl.mxndarijn.wieisdemol.WieIsDeMol;
+import nl.mxndarijn.cluedo.Cluedo;
 import org.apache.commons.io.FileUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
@@ -81,7 +81,7 @@ public class MxAtlas {
         wc.generator(new VoidGenerator());
         wc.generateStructures(false);
 
-        BukkitTask task = Bukkit.getScheduler().runTask(JavaPlugin.getPlugin(WieIsDeMol.class), () -> {
+        BukkitTask task = Bukkit.getScheduler().runTask(JavaPlugin.getPlugin(Cluedo.class), () -> {
             World world = wc.createWorld();
             if (world == null) {
                 future.complete(false);

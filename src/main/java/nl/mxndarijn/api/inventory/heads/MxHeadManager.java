@@ -7,8 +7,8 @@ import com.mojang.authlib.properties.Property;
 import nl.mxndarijn.api.logger.LogLevel;
 import nl.mxndarijn.api.logger.Logger;
 import nl.mxndarijn.api.logger.Prefix;
-import nl.mxndarijn.wieisdemol.WieIsDeMol;
-import nl.mxndarijn.wieisdemol.data.ConfigFiles;
+import nl.mxndarijn.cluedo.Cluedo;
+import nl.mxndarijn.cluedo.data.ConfigFiles;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.OfflinePlayer;
@@ -29,7 +29,7 @@ public class MxHeadManager {
 
     public MxHeadManager() {
         fileConfiguration = ConfigFiles.HEAD_DATA.getFileConfiguration();
-        Bukkit.getScheduler().scheduleSyncDelayedTask(JavaPlugin.getPlugin(WieIsDeMol.class), () -> {
+        Bukkit.getScheduler().scheduleSyncDelayedTask(JavaPlugin.getPlugin(Cluedo.class), () -> {
             Logger.logMessage(LogLevel.INFORMATION, Prefix.MXHEAD_MANAGER, "Refreshing player skulls...");
             for (String key : fileConfiguration.getKeys(false)) {
                 Optional<MxHeadSection> optionalSection = MxHeadSection.loadHead(key);

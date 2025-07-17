@@ -6,18 +6,17 @@ import nl.mxndarijn.api.logger.Logger;
 import nl.mxndarijn.api.logger.Prefix;
 import nl.mxndarijn.api.util.Functions;
 import nl.mxndarijn.api.util.MxWorldFilter;
-import nl.mxndarijn.wieisdemol.WieIsDeMol;
-import nl.mxndarijn.wieisdemol.data.ChatPrefix;
-import nl.mxndarijn.wieisdemol.data.ItemTag;
-import nl.mxndarijn.wieisdemol.game.Game;
-import nl.mxndarijn.wieisdemol.game.GamePlayer;
-import nl.mxndarijn.wieisdemol.managers.language.LanguageManager;
-import nl.mxndarijn.wieisdemol.managers.language.LanguageText;
-import nl.mxndarijn.wieisdemol.managers.world.GameWorldManager;
+import nl.mxndarijn.cluedo.Cluedo;
+import nl.mxndarijn.cluedo.data.ChatPrefix;
+import nl.mxndarijn.cluedo.data.ItemTag;
+import nl.mxndarijn.cluedo.game.Game;
+import nl.mxndarijn.cluedo.game.GamePlayer;
+import nl.mxndarijn.cluedo.managers.language.LanguageManager;
+import nl.mxndarijn.cluedo.managers.language.LanguageText;
+import nl.mxndarijn.cluedo.managers.world.GameWorldManager;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.entity.Player;
-import org.bukkit.event.Event;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
@@ -49,7 +48,7 @@ public abstract class MxItem implements Listener {
         this.languageManager = LanguageManager.getInstance();
         this.actions = actions;
 
-        plugin = JavaPlugin.getPlugin(WieIsDeMol.class);
+        plugin = JavaPlugin.getPlugin(Cluedo.class);
         plugin.getServer().getPluginManager().registerEvents(this, plugin);
     }
 

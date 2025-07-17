@@ -3,7 +3,7 @@ package nl.mxndarijn.api.changeworld;
 import nl.mxndarijn.api.logger.LogLevel;
 import nl.mxndarijn.api.logger.Logger;
 import nl.mxndarijn.api.logger.Prefix;
-import nl.mxndarijn.wieisdemol.WieIsDeMol;
+import nl.mxndarijn.cluedo.Cluedo;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerChangedWorldEvent;
@@ -25,7 +25,7 @@ public class ChangeWorldManager implements Listener {
         Logger.logMessage(LogLevel.DEBUG, Prefix.CHANGEWORLD_MANAGER, "Loading...");
         worlds = new HashMap<>();
 
-        JavaPlugin plugin = JavaPlugin.getPlugin(WieIsDeMol.class);
+        JavaPlugin plugin = JavaPlugin.getPlugin(Cluedo.class);
 
         plugin.getServer().getPluginManager().registerEvents(this, plugin);
 

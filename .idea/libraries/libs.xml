@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="libs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/lib-CMILib1.4.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/TTA-5.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/lib-TAB.v4.0.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

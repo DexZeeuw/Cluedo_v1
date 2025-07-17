@@ -5,7 +5,7 @@ import nl.mxndarijn.api.logger.LogLevel;
 import nl.mxndarijn.api.logger.Logger;
 import nl.mxndarijn.api.logger.Prefix;
 import nl.mxndarijn.api.util.Functions;
-import nl.mxndarijn.wieisdemol.WieIsDeMol;
+import nl.mxndarijn.cluedo.Cluedo;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
@@ -21,7 +21,7 @@ public class MxChatInputManager implements Listener {
 
     private MxChatInputManager() {
         map = new HashMap<>();
-        JavaPlugin plugin = JavaPlugin.getPlugin(WieIsDeMol.class);
+        JavaPlugin plugin = JavaPlugin.getPlugin(Cluedo.class);
 
         plugin.getServer().getPluginManager().registerEvents(this, plugin);
         Logger.logMessage(LogLevel.INFORMATION, Prefix.MXCHATINPUT_MANAGER, "MxChatInputManager loaded...");

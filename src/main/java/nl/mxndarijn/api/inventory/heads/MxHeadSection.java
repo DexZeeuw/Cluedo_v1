@@ -3,7 +3,7 @@ package nl.mxndarijn.api.inventory.heads;
 import nl.mxndarijn.api.logger.LogLevel;
 import nl.mxndarijn.api.logger.Logger;
 import nl.mxndarijn.api.logger.Prefix;
-import nl.mxndarijn.wieisdemol.data.ConfigFiles;
+import nl.mxndarijn.cluedo.data.ConfigFiles;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
 

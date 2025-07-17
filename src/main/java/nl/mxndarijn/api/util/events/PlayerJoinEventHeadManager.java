@@ -7,7 +7,7 @@ import nl.mxndarijn.api.inventory.heads.MxHeadsType;
 import nl.mxndarijn.api.logger.LogLevel;
 import nl.mxndarijn.api.logger.Logger;
 import nl.mxndarijn.api.logger.Prefix;
-import nl.mxndarijn.wieisdemol.WieIsDeMol;
+import nl.mxndarijn.cluedo.Cluedo;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.event.EventHandler;
@@ -23,7 +23,7 @@ public class PlayerJoinEventHeadManager implements Listener {
 
     @EventHandler
     public void join(PlayerJoinEvent e) {
-        Bukkit.getScheduler().runTaskLaterAsynchronously(JavaPlugin.getPlugin(WieIsDeMol.class), () -> {
+        Bukkit.getScheduler().runTaskLaterAsynchronously(JavaPlugin.getPlugin(Cluedo.class), () -> {
             Optional<MxHeadSection> section = MxHeadManager.getInstance().getHeadSection(e.getPlayer().getUniqueId().toString());
             if (section.isEmpty()) {
 

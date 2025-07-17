@@ -1,6 +1,6 @@
 name: WieIsDeMol
 version: '1.0-SNAPSHOT'
-main: nl.mxndarijn.wieisdemol.WieIsDeMol
+main: nl.mxndarijn.cluedo.Cluedo
 api-version: 1.19
 depend: [ ProtocolLib, PlaceholderAPI, TAB]
 softdepend: [ SuperVanish]
